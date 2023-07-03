@@ -5,8 +5,8 @@ import ChatItem from "../ChatItem";
 const Main = ({ question }) => {
   return (
     <div className="main">
-      <ChatItem profileLink={profileImageLink} text={question} />
-      <ChatItem profileLink="/images/gpt.png" text={chatgptResponse} />
+      <ChatItem profileLink={profileImageLink} text={""} />
+      <ChatItem profileLink="/images/gpt.png" text={""} />
     </div>
   );
 };

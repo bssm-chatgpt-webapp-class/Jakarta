@@ -1,8 +1,8 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { SendIcon } from "../../icons";
 import "./index.css";
 
-const TextField = ({ setQuestion }) => {
+const TextField = ({ sendChat }) => {
   const inputRef = useRef();
 
   return (
@@ -10,7 +10,7 @@ const TextField = ({ setQuestion }) => {
       <input ref={inputRef} />
       <SendIcon
         onClick={() => {
-          setQuestion(inputRef.current.value);
+          sendChat(inputRef.current.value);
         }}
       />
     </div>
