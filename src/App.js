@@ -1,11 +1,12 @@
-import { Header, Main } from "./components";
+import { Header, Main, TextField } from "./components";
 import "./reset.css";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Header />
       <Main />
+      <TextField />
     </div>
   );
 }
