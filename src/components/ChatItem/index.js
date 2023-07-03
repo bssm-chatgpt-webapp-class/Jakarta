@@ -1,10 +1,10 @@
-import React from "react";
+import "./index.css";
 
 const ChatItem = ({ profileLink, text }) => {
   return (
-    <div className="question">
-      <img className="question-profile" src={profileLink} />
-      <div>{text}</div>
+    <div className="chatitem">
+      <img className="chatitem-profile" src={profileLink} />
+      <pre>{text}</pre>
     </div>
   );
 };

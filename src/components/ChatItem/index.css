@@ -1,8 +1,12 @@
-.question {
+.chatitem {
   display: flex;
 }
 
-.question-profile {
+.chatitem-profile {
   width: 30px;
   height: 30px;
+}
+
+.chatitem pre {
+  white-space: pre-wrap;
 }
