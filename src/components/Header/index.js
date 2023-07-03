@@ -1,12 +1,13 @@
 import React from "react";
 import { PlusIcon, HambugIcon } from "../../icons";
+import "./index.css";
 
 const Header = () => {
   return (
-    <div>
-      <PlusIcon />
-      <div>New Chat</div>
+    <div className="header">
       <HambugIcon />
+      <div>New Chat</div>
+      <PlusIcon />
     </div>
   );
 };
