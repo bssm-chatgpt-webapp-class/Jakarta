@@ -1,12 +1,19 @@
 import "./index.css";
-import { profileImageLink, chatgptResponse } from "../../fixtures";
+import { profileImageLink } from "../../fixtures";
 import ChatItem from "../ChatItem";
 
-const Main = ({ question }) => {
+const Main = ({ chatMessages }) => {
   return (
     <div className="main">
-      <ChatItem profileLink={profileImageLink} text={""} />
-      <ChatItem profileLink="/images/gpt.png" text={""} />
+      {chatMessages.map((message, idx) => {
+        return (
+          <ChatItem
+            key={idx}
+            profileLink={message.isMine ? profileImageLink : "/images/gpt.png"}
+            text={message.message}
+          />
+        );
+      })}
     </div>
   );
 };
