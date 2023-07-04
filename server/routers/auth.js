@@ -14,17 +14,17 @@ router.post("/signin", async (req, res) => {
     return res.json("no user");
   }
 
-  const token = jwt.sign({ email }, "secret");
+  const token = jwt.sign({ id: results[0].id, email }, "secret");
 
   res.json(token);
 });
 
 router.post("/signup", async (req, res) => {
   const { email, pw } = req.body;
-  await getConnection().execute(`insert into user(email, password) values(?, ?)`, [
-    email,
-    pw,
-  ]);
+  await getConnection().execute(
+    `insert into user(email, password) values(?, ?)`,
+    [email, pw],
+  );
   return res.json("success");
 });
 

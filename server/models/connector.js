@@ -10,7 +10,6 @@ const connect = async () => {
       password: "qwe123",
       database: "mytodo",
     });
-  console.log("change connection");
 };
 
 const getConnection = () => {
