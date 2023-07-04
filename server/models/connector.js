@@ -1,6 +1,6 @@
 const mysql = require("mysql2/promise");
 
-let connection;
+let connection = null;
 
 const connect = async () => {
   if (!connection)
