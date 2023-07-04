@@ -5,4 +5,5 @@ module.exports = {
   dbName: process.env.DB_NAME,
   dbPort: process.env.DB_PORT,
   jwtSecret: process.env.JWT_SECRET,
+  apiKey: process.env.OPENAI_API_KEY,
 };
