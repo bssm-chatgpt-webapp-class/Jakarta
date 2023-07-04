@@ -7,7 +7,7 @@ const hasAuth = async (req, res, next) => {
     `select * from user where id=?`,
     [id],
   );
-  console.log(results[0]);
+  console.log(req.user.id);
   if (results.lenght === 0) {
     return req.status(400).json("없음");
   }

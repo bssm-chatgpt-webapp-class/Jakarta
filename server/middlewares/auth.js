@@ -1,10 +1,11 @@
 const jwt = require("jsonwebtoken");
 const { getConnection } = require("../models/connector");
+const env = require("../config/env");
 
 const validateToken = async (req, res, next) => {
   const token = req.headers.authorization;
   try {
-    const tokenResult = jwt.verify(token, "secret");
+    const tokenResult = jwt.verify(token, env.jwtSecret);
     const [results] = await getConnection().execute(
       `SELECT * FROM user where id=?`,
       [tokenResult.id],
