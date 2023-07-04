@@ -1,0 +1,20 @@
+const mysql = require("mysql2/promise");
+
+let connection;
+
+const connect = async () => {
+  if (!connection)
+    connection = await mysql.createConnection({
+      host: "localhost",
+      user: "root",
+      password: "qwe123",
+      database: "mytodo",
+    });
+  console.log("change connection");
+};
+
+const getConnection = () => {
+  return connection;
+};
+
+module.exports = { connect, getConnection };
